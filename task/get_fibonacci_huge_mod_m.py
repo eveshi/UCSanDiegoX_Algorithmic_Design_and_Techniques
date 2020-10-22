@@ -11,12 +11,13 @@ def find_pisano_period(n, m):
             return i+1
 
 def get_fibonacci_huge_naive(n, m):
+    period = find_pisano_period(n, m)
+    n = n%period
+
+    # notice that should get new n first, then check if n <= 1
     if n <= 1:
         return n
 
-    period = find_period(n, m)
-
-    n = n%period
     previous = 0
     current  = 1
 
