@@ -10,9 +10,7 @@ def custom_sort(str1, str2):
 def largest_number(a):
     #write your code here
     astring = [str(i) for i in a]
-    print(astring)
     astring.sort(key=functools.cmp_to_key(custom_sort), reverse=True)
-    print(astring)
 
     res = ""
     for x in astring:
