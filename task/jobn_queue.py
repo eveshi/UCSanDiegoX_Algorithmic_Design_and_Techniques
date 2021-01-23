@@ -35,7 +35,6 @@ def assign_jobs(n_workers, jobs):
     next_free_time = [0] * n_workers
     pos = [x for x in range(n_workers)]
     for job in jobs:
-        print(pos)
         result.append(AssignedJob(pos[0], next_free_time[0]))
         next_free_time[0] += job
         curr = 0

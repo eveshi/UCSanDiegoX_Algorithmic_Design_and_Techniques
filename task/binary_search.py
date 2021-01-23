@@ -3,18 +3,15 @@ import sys
 
 def binary_search(a, x):
     left, right = 0, len(a)-1
-    print("=>", a, x)
     # write your code here
     while left <= right:
         mid = (left+right)//2
-        print("mid===>", mid)
         if a[mid] == x:
             return mid
         elif a[mid] < x:
             left = mid + 1
         elif a[mid] > x:
             right = mid - 1
-        print(left, right)
         
     return -1
 

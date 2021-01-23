@@ -12,12 +12,9 @@ def get_majority_element(a, left, right):
     begin = left
     end = left
     while end < len(a):
-        print(begin, end)
-        print(end-begin+1, "std===> ", std)
         if a[end] != a[begin]:
             begin = end
         if (end - begin + 1) > std:
-            print(end-begin+1, "std===> ", std, "bingo")
             return 1
         end += 1
 
