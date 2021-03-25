@@ -149,7 +149,6 @@ def search(x):
   return False
   
 def sum(fr, to):
-  print("==>", fr, to)
   global root
   (left, middle) = split(root, fr)
   (middle, right) = split(middle, to + 1)

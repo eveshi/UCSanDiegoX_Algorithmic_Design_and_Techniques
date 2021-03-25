@@ -22,7 +22,8 @@ def process_queries(queries):
             # we should rewrite contact's name
             contacts[cur_query.number] = cur_query.name
         elif cur_query.type == 'del':
-            del contacts[cur_query.number]
+            if cur_query.number in contacts:
+                del contacts[cur_query.number]
         else:
             response = 'not found'
             if cur_query.number in contacts:
