@@ -4,6 +4,19 @@ import queue
 
 def distance(adj, s, t):
     # write your code here
+    q = queue.Queue()
+    q.put((s, 0))
+    seen = set()
+    seen.add(s)
+    while not q.empty():
+        (curr, length) = q.get()
+        for node in adj[curr]:
+            if node == t:
+                return length + 1
+            if node not in seen:
+                q.put((node, length+1))
+                seen.add(node)
+
     return -1
 
 
